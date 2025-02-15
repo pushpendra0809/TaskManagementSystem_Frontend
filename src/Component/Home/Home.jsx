@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import TaskCard from './TaskCard/TaskCard'; 
 import style from '../Home/Home.module.css';
-import Navbar from '../Navbar/Navbar'
+import Navbar from '../Navbar/Navbar';
+import {Hostlink} from '../Hostlink/Hostlink.jsx';
 const Home = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -30,7 +31,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/user/taskbyuser/${userId}`);
+        const response = await axios.get(`https://taskmanagementsystem-backend-1.onrender.com/user/taskbyuser/${userId}`);
         setData(response.data.result);
         setError(null);
       } catch (error) {
@@ -43,7 +44,7 @@ const Home = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:8000/user/task/${id}`);
+      const response = await axios.delete(`${Hostlink}/user/task/${id}`);
       alert(response.data.message);
       setData(data.filter(task => task._id !== id));
     } catch (error) {

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import DashNavbar from '../SideNavbar/SideNavbar.jsx';
 import style from '../Dashboard/Dashboard.module.css';
 import axios from 'axios';
+import {Hostlink} from '../../Component/Hostlink/Hostlink.jsx'
 const Dashboard = () => {
     const [stats, setStats] = useState({
         totalAssigned: 0,
@@ -14,7 +15,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:8000/user/task/");
+                const response = await axios.get(`${Hostlink}/user/task/`);
                 const AllData = response.data.result;
 
                 const assignedTasks = AllData.filter(task => task.Assign_To).length;

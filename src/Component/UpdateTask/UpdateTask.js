@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import style from '../UpdateTask/UpdateTask.module.css';
 import Navbar from '../Navbar/Navbar';
 import SideNavbar from '../../Admin/SideNavbar/SideNavbar.jsx'
+import {Hostlink} from '../Hostlink/Hostlink.jsx';
 const UpdateTask = () => {
   const { id: taskId } = useParams();
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const UpdateTask = () => {
   
     const fetchTask = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/user/task/${taskId}`);
+        const response = await axios.get(`${Hostlink}/user/task/${taskId}`);
         const fetchedTask = response.data.result;
         setTask({
           PostBy: fetchedTask.PostBy,
@@ -78,7 +79,7 @@ const UpdateTask = () => {
     }
 
     try {
-      const response = await axios.put(`http://localhost:8000/user/task/${taskId}`, updatedTask, {
+      const response = await axios.put(`${Hostlink}/user/task/${taskId}`, updatedTask, {
         headers: {
           'Content-Type': 'application/json',
         },

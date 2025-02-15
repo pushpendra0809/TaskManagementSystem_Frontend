@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import style from "../Login/Login.module.css"
-
+import {Hostlink} from '../Hostlink/Hostlink';
 const Login = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -27,7 +27,7 @@ const Login = () => {
     setMessage('');
 
     try {
-      const response = await axios.post('http://localhost:8000/user/login/', formData);
+      const response = await axios.post(`${Hostlink}/user/login/`, formData);
       setMessage(response.data.message);
 
       if (response.data.token) {

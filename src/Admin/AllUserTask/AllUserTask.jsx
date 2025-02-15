@@ -3,7 +3,7 @@ import axios from 'axios';
 import TaskCard from './AllUserTaskCard/AllUserTaskCard.jsx';
 import style from '../AllUserTask/AllUserTask.module.css';
 import DashNavbar from '../SideNavbar/SideNavbar.jsx';
-
+import { Hostlink } from '../../Component/Hostlink/Hostlink.jsx';
 const AllUserTask = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
@@ -12,7 +12,7 @@ const AllUserTask = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/user/task/`);
+        const response = await axios.get(`${Hostlink}/user/task/`);
         setData(response.data.result);
         setError(null);
       } catch (error) {
@@ -25,7 +25,7 @@ const AllUserTask = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:8000/user/task/${id}`);
+      const response = await axios.delete(`${Hostlink}/user/task/${id}`);
       alert(response.data.message);
       setData(data.filter(task => task._id !== id));
     } catch (error) {

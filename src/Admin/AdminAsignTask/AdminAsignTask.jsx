@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {Link} from "react-router-dom"
 import style from '../AdminAsignTask/AdminAsignTask.module.css';
-import DashNavbar from '../SideNavbar/SideNavbar.jsx'
+import DashNavbar from '../SideNavbar/SideNavbar.jsx';
+import {Hostlink} from '../../Component/Hostlink/Hostlink.jsx'
 const AdminAsignTask = () => {
   const [data, setData] = useState([]); 
   const [showCard, setShowCard] = useState(6);
@@ -31,7 +32,7 @@ const AdminAsignTask = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/user/task/'); 
+        const response = await axios.get(`${Hostlink}/user/task/`); 
         const allTask = response.data.result;
         const filteredTask = allTask.filter(task => task.userId === userId);
         setData(filteredTask); 
@@ -46,7 +47,7 @@ const AdminAsignTask = () => {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:8000/user/task/${id}`);
+      const response = await axios.delete(`${Hostlink}/user/task/${id}`);
       alert(response.data.message); 
       setData(data.filter(product => product._id !== id));
     } catch (error) {

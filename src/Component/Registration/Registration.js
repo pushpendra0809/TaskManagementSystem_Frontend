@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import style from "../Registration/Registration.module.css"
 import { useNavigate } from 'react-router-dom'; 
+import {Hostlink} from '../Hostlink/Hostlink';
 const Registration = () => {
   const [formData, setFormData] = useState({
     firstname: '',
@@ -29,7 +30,7 @@ const Registration = () => {
     setMessage('');
 
     try {
-      const response = await axios.post('http://localhost:8000/user/registration/', formData);
+      const response = await axios.post(`${Hostlink}/user/registration/`, formData);
       setMessage(response.data.message);
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);

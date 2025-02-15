@@ -4,6 +4,7 @@ import axios from "axios";
 import style from "../CreateTask/CreateTask.module.css";
 import Navbar from "../Navbar/Navbar.js";
 import SideNavbar from "../../Admin/SideNavbar/SideNavbar.jsx"
+import {Hostlink} from "../Hostlink/Hostlink.jsx";
 const CreateTask = () => {
   const [PostBy, setPostBy] = useState("");
   const [title, setTitle] = useState("");
@@ -85,7 +86,7 @@ const CreateTask = () => {
     };
 
     try {
-      const response = await axios.post("http://localhost:8000/user/task/", formData, {
+      const response = await axios.post(`${Hostlink}/user/task/`, formData, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${localStorage.getItem("token")}`,

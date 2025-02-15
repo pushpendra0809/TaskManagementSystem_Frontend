@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import style from '../ChangePassword/ChangePassword.module.css';
-import SideNavbar from '../../Admin/SideNavbar/SideNavbar.jsx'
+import SideNavbar from '../../Admin/SideNavbar/SideNavbar.jsx';
+import {Hostlink} from '../Hostlink/Hostlink.jsx';
 const ChangePassword = () => {
   const [formData, setFormData] = useState({
     currentPassword: '',
@@ -30,7 +31,7 @@ const ChangePassword = () => {
       const token = localStorage.getItem('token');
 
       const response = await axios.post(
-        'http://localhost:8000/user/change-password/',
+        `${Hostlink}/user/change-password/`,
         formData,
         {
           headers: { Authorization: `Bearer ${token}` }, 

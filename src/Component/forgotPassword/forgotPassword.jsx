@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import style from '../Login/Login.module.css';
-
+import {Hostlink} from '../Hostlink/Hostlink.jsx';
 const ForgotPassword = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -27,7 +27,7 @@ const ForgotPassword = () => {
     setMessage('');
 
     try {
-      const response = await axios.post('http://localhost:8000/user/forgot-password', formData);
+      const response = await axios.post(`${Hostlink}/user/forgot-password`, formData);
       setMessage(response.data.message);
 
       setTimeout(() => {
