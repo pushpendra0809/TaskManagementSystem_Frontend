@@ -1,0 +1,172 @@
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1a1a2e;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease-in-out;
+}
+
+.bothBran {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.open {
+  width: 200px;
+}
+
+.closed {
+  width: 80px;
+}
+
+.toggleBtn {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: -10px;
+}
+
+.logo h3 {
+  color: #00aaff;
+  text-align: center;
+  font-size: 26px;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navList li {
+  margin: 15px 0;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.navLink:hover {
+  background-color: #0f3460;
+  transform: scale(1.05);
+}
+
+.userSection {
+  margin-top: 20%;
+  text-align: center;
+}
+
+.userInfo {
+  color: #00aaff;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.logoutBtn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.logoutBtn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.authLink {
+  text-decoration: none;
+}
+
+.authBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.authBtn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bothBran{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navList, .userSection {
+    display: none; 
+  }
+
+  .sidebar.open .navList, 
+  .sidebar.open .userSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .userSection{
+    margin-top: 0%;
+  }
+}
+@media (max-width: 304px) {
+  .sidebar {
+    width: 112.5vh;
+    height: auto;
+    position: relative;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bothBran{
+    width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 769px) {
+  .navList, .userSection {
+    display: flex !important; 
+    flex-direction: column;
+  }
+  
+}
+

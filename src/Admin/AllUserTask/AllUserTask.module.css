@@ -1,0 +1,117 @@
+.withNavbar{
+  background-color: #121212; 
+}
+.TopHeader{
+  display: flex;
+  flex-direction: column;
+  margin: 0 2% 0 3%;
+}
+
+.AllTaskAssign_To{
+  display: flex;
+  flex-direction: column;
+  color: aqua;
+}
+.CardName {
+    background-color: #121212; 
+    padding: 10px;
+    margin-left: 240px;
+}
+.CardName .CardNameHeading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    min-height: 100vh;
+    background-color: #121212; 
+
+  }
+  
+  .Card {
+    flex: 1 1 300px; 
+    max-width: 360px;
+    padding: 8px;
+    background-color: #1e1e1e; 
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin:20px 5px 0 0;
+
+  }
+  
+  .Card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  @media (max-width: 1024px) {
+    .mainContainer {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+   
+  }
+  
+  @media (max-width: 768px) {
+    .mainContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .CardName{
+      width: 100%;
+      margin-left: 0px;
+    }
+    .withNavbar{
+      background-color: transparent; 
+    }
+  }
+  @media (max-width: 400px) {
+    .mainContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .CardName{
+      width: 100%;
+      margin-left: 0px;
+    }
+    .Card {
+      flex: 1 1 300px; 
+      max-width: 280px;
+      padding: 8px;
+      background-color: #1e1e1e; 
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      margin:20px 5px 0 0;
+  
+    }
+  }
+  @media (max-width: 304px) {
+    .mainContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .CardName{
+      width: 112.5vh;
+      margin-left: 0px;
+    }
+    .Card {
+      flex: 1 1 300px; 
+      max-width: 330px;
+      padding: 8px;
+      background-color: #1e1e1e; 
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      margin:20px 5px 0 0;
+  
+    }
+  }
+  

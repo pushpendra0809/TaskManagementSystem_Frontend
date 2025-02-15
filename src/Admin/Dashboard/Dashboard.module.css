@@ -1,0 +1,142 @@
+    .withNavBackColor{
+      background-color: #121212; 
+    }
+    .AllContent{
+      margin-left: 250px;
+      background-color: #121212; 
+    }
+    .mainContainer12 {
+        color: #ffffff; 
+        display: flex;
+        align-items: start;
+        justify-content: end;
+        padding: 20px;
+    }
+
+    .cardIteam12 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .Card12 {
+        background: #1e1e1e; 
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .Card12 h4 {
+        font-size: 18px;
+        font-weight: bold;
+        color: #e0e0e0; 
+        margin-bottom: 10px;
+    }
+
+    .Card12 p {
+        font-size: 24px;
+        font-weight: bold;
+        color: #00adb5; 
+    }
+
+    .Card12:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 173, 181, 0.4);
+    }
+
+    .newDiv{
+        background-color: #121212; 
+        min-height: 72.1vh;
+        padding: 0 0 0 20px;
+    }
+    .newDivName{
+    display: flex;
+
+    }
+    .newDivName h1{
+    padding: 0 0 0 50px;
+
+    }
+    .newDivCard{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    margin-right: 18px;
+    }
+ 
+    .CardIteam {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+    
+    .mainContainer {
+      background-color: #1e1e1e; 
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .DocterCard {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .iteam {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #333;
+    }
+    
+    .iteam h4 {
+      font-size: 1rem;
+      color: #bbbbbb;
+      margin: 0;
+    }
+    
+    .iteam p {
+      font-size: 1rem;
+      margin: 0;
+      color: #ffffff;
+    }
+    
+    @media (max-width: 768px) {
+      .AllContent{
+        margin-left: 0;
+        width: 103%;
+      }
+     
+    }
+    @media (max-width: 500px) {
+      .AllContent{
+        margin-left: 0;
+        width: 104%;
+      }
+     
+    }
+    @media (max-width: 439px) {
+      .AllContent{
+        margin-left: 0;
+        width: 105%;
+      }
+     
+    }
+    @media (max-width: 304px) {
+      .AllContent{
+        margin-left: 0;
+        width: 118vh;
+      }
+     
+    }

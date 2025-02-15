@@ -1,0 +1,155 @@
+.navbar {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #ff9800;
+}
+
+.mobileIcon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.navMenu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navMenu.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.closeBtn {
+  align-self: flex-end;
+  margin: 0.5rem 1rem 0 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navItem {
+  margin: 0 1rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #bbbbbb;
+}
+
+.navAuth {
+  display: flex;
+  align-items: center;
+}
+
+.welcome {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.buttonLogout,
+.button {
+  background-color: #ff9800;
+  border: 1px solid #ff9800;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 1rem;
+}
+
+.buttonLogout:hover,
+.button:hover {
+  background-color: #ff9800;
+  color: #121212;
+}
+
+.linkButton {
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.navAuthMobile {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .mobileIcon {
+    display: block;
+  }
+  .BothBrand{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navMenu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #121212;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 1rem 0;
+  }
+  .navMenu.active {
+    display: flex;
+  }
+  .navItem {
+    margin: 1rem 0;
+  }
+  .navContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navAuth {
+    display: none;
+  }
+}
+@media (max-width: 430px) {
+  .navbar {
+    background-color: #121212;
+    width: 120vh;
+
+  }
+  .navContainer {
+    background-color: #121212;
+    width: 100vh;
+
+  }
+  .BothBrand{
+      background-color: #121212;
+    width: 100vh;
+    display: flex;
+    justify-content: space-between;
+  }
+}
