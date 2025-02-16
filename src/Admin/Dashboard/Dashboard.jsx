@@ -4,9 +4,9 @@ import style from '../Dashboard/Dashboard.module.css';
 import axios from 'axios';
 import {Hostlink} from '../../Component/Hostlink/Hostlink.jsx'
 const Dashboard = () => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    const currentUserId = user ? user._id : null;
-
+    const [userId, setUserId] = useState(""); 
+      const [error, setError] = useState(null); 
+    
     const [stats, setStats] = useState({
         totalAssigned: 0,
         totalUserTasks: 0,
@@ -16,11 +16,30 @@ const Dashboard = () => {
     const [latestTasks, setLatestTasks] = useState([]);
 
     useEffect(() => {
+        const fetchUserId = () => {
+          const token = localStorage.getItem('token');  
+    
+          if (token) {
+            try {
+              const decodedToken = JSON.parse(atob(token.split('.')[1])); 
+              setUserId(decodedToken.userID);  
+            } catch (error) {
+              setError('Error decoding token');
+            }
+          } else {
+            setError('No token found in localStorage');
+          }
+        };
+    
+        fetchUserId();
+      }, []); 
+
+    useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(`${Hostlink}/user/task/`);
                 const AllData = response.data.result;
-                const userAssignedTasks = currentUserId ? AllData.filter(task => task.userId === currentUserId): [];
+                const userAssignedTasks = AllData.filter(task => task.userId === userId);
                 const assignedTasks = userAssignedTasks.length;
                 const userTasks = AllData.length;
                 const inProgressTasks = AllData.filter(task => task.status === 'In Progress').length;
@@ -33,7 +52,7 @@ const Dashboard = () => {
                     totalCompleted: completedTasks
                 });
 
-                const latestAssigned = AllData.filter(task => task.Assign_To).slice(-3).reverse(); 
+                const latestAssigned = userAssignedTasks.filter(task => task.Assign_To).slice(-3).reverse(); 
 
                 setLatestTasks(latestAssigned);
             } catch (error) {
@@ -41,7 +60,7 @@ const Dashboard = () => {
             }
         };
         fetchData();
-    }, []);
+    }, [userId]);
 
     return (
         <> 
@@ -113,6 +132,7 @@ const Dashboard = () => {
                         <p>No task available for you.</p>
                     )}
              </div>
+                     {error && <p className={style.error}>{error}</p>}
                 </div>
             </div>
             </div>
