@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import style from "../Registration/Registration.module.css"
 import { useNavigate } from 'react-router-dom'; 
-import {Hostlink} from '../Hostlink/Hostlink';
+import { Hostlink } from '../Hostlink/Hostlink.jsx';
 const Registration = () => {
   const [formData, setFormData] = useState({
     firstname: '',
@@ -34,13 +34,10 @@ const Registration = () => {
       setMessage(response.data.message);
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
-      }
-     
-      if (formData.Userrole === 'Admin') {
-        navigate('/dashboard');
-      } else {
         navigate('/login');
       }
+     
+     
     } catch (error) {
       setError(error.response?.data.message || 'Registration failed');
     }
@@ -77,13 +74,6 @@ const Registration = () => {
             <option value="Admin">Admin</option>
           </select>
         </div>
-        {formData.Userrole === 'Doctor' && (
-            <div>
-              <label>Medical Specialty:</label>
-              <input
-                type="text" name="MedicalSpecialty" value={formData.MedicalSpecialty} onChange={handleChange}  />
-            </div>
-          )}
         <button type="submit">Register</button>
       </form>
       {message && <p style={{ color: 'green' }}>{message}</p>}
