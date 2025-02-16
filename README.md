@@ -53,6 +53,9 @@ cd task-management
     ```
 3. Create a `.env` file in the backend root and add:
     ```env
+    If running the backend on localhost, navigate to the Component folder and locate the Hostlink file. Uncomment the localhost URL and comment out the Render deployment URL to ensure proper connection.
+    
+    PORT = 8000 
     PORT= "https://taskmanagementsystem-backend-ikb1.onrender.com"
     DATABASE_URL='mongodb+srv://pushpendra0809:Push%400809@cluster0.adv4a.mongodb.net/TaskManagment?retryWrites=true&w=majorit'
     JWT_SECRET_KEY="kjsyefhknjgssj8sjhjvduyt3rr8dbfh32876tdjdbht7834hw76rh38rb8erhjdft78"
