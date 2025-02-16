@@ -53,9 +53,9 @@ cd task-management
     ```
 3. Create a `.env` file in the backend root and add:
     ```env
-    PORT= Host On Render
-    DATABASE_URL="I am useing MongoDB Atlas"
-    JWT_SECRET_KEY="your-secret-key"
+    PORT= "https://taskmanagementsystem-backend-ikb1.onrender.com"
+    DATABASE_URL='mongodb+srv://pushpendra0809:Push%400809@cluster0.adv4a.mongodb.net/TaskManagment?retryWrites=true&w=majorit'
+    JWT_SECRET_KEY="kjsyefhknjgssj8sjhjvduyt3rr8dbfh32876tdjdbht7834hw76rh38rb8erhjdft78"
     ```
 4. Start the backend server:
     ```sh
