@@ -2,8 +2,8 @@
   background-color: #121212; 
 }
 .fullContainer{
-    margin-left: 205px;
-    padding-bottom: 20px;
+  margin-left:var(--sidebar-width);
+  padding-bottom: 20px;
 
 }
 .card .mainHeading{
@@ -18,6 +18,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 25px;
 }
 
 h1 {
@@ -146,6 +147,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 0;
 }
 .fullContainer{
   background-color: #121212; 

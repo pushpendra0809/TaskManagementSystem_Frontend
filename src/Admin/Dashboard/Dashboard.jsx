@@ -43,7 +43,7 @@ const Dashboard = () => {
     return (
         <> 
 
-        <div className={style.withNavBackColor}>
+        <div className={style.withNavbar}>
             <DashNavbar />
             <div className={style.AllContent}>
             <div className={style.mainContainer12}>

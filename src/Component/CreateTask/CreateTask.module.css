@@ -11,9 +11,10 @@
     justify-content: center;
     padding: 20px;
     min-height: 100vh;
+    margin-left: 25px;
 }
 .adminContainer {
-    margin-left: 240px;
+    margin-left:var(--sidebar-width);
 }
 
 .mainheading {
@@ -129,6 +130,9 @@
     }
     .Containerresposiv{
         width: 95%;
+    }
+    .container{
+        margin-left: 0;
     }
 }
 

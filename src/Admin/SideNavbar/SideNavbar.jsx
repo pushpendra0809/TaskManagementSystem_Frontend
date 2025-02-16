@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaBars, FaUser, FaSignOutAlt, FaHome, FaClipboardList, FaClipboardCheck,FaCalendarCheck, FaEnvelope,} from "react-icons/fa";
 import style from "./SideNavbar.module.css";
@@ -13,10 +13,15 @@ const DashNavbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const sidebarWidth = isOpen ? "200px" : "80px";
+    document.documentElement.style.setProperty("--sidebar-width", sidebarWidth);
+  }, [isOpen]);
+
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    navigate("/home");
+    navigate("/login");
   };
 
   return (

@@ -1,8 +1,8 @@
-    .withNavBackColor{
+    .withNavbar{
       background-color: #121212; 
     }
     .AllContent{
-      margin-left: 250px;
+      margin-left:var(--sidebar-width);
       background-color: #121212; 
     }
     .mainContainer12 {
@@ -11,6 +11,7 @@
         align-items: start;
         justify-content: end;
         padding: 20px;
+        margin-left: 25px;
     }
 
     .cardIteam12 {
@@ -55,17 +56,17 @@
     }
     .newDivName{
     display: flex;
-
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     }
-    .newDivName h1{
-    padding: 0 0 0 50px;
-
-    }
+   
     .newDivCard{
     display: flex;
     align-items: end;
     justify-content: end;
     margin-right: 18px;
+    margin-left: 25px;
     }
  
     .CardIteam {
@@ -84,6 +85,7 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+     
     }
     
     .DocterCard {
@@ -116,6 +118,17 @@
       .AllContent{
         margin-left: 0;
         width: 103%;
+        
+      }
+      .mainContainer12 {
+        margin-left: 0;
+      }
+      .newDivCard{
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        margin-right: 18px;
+        margin-left: 0;
       }
      
     }

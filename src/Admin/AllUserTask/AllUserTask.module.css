@@ -1,10 +1,16 @@
 .withNavbar{
   background-color: #121212; 
 }
-.TopHeader{
+
+.filterDropDownMain{
+  width: 100%;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  margin: 0 2% 0 3%;
+  align-items: center;
+  justify-content: center;
+}
+.filterDropDown{
+  width: 84%;
 }
 
 .AllTaskAssign_To{
@@ -15,7 +21,7 @@
 .CardName {
     background-color: #121212; 
     padding: 10px;
-    margin-left: 240px;
+    margin-left:var(--sidebar-width);
 }
 .CardName .CardNameHeading{
     display: flex;

@@ -49,6 +49,7 @@ const AllUserTask = () => {
           <div className={style.TopHeader}>
           <h1 className={style.CardNameHeading}>All User Task</h1>
 
+          <div className={style.filterDropDownMain}>
           <div className={style.filterDropDown}>
             <label htmlFor="assigneeFilter" style={{color:"aqua"}}>Filter by Assign To : </label>
             <select className={style.filterBar}
@@ -62,6 +63,7 @@ const AllUserTask = () => {
                 </option>
               ))}
             </select>
+          </div>
           </div>
           </div>
 

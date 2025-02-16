@@ -59,7 +59,10 @@ const Login = () => {
           <input
             type="password"  name="password" value={formData.password} onChange={handleChange}/>
         </div>
-        <Link to="/forgotpassword" className={style.ForgotButton}>Forgot Password</Link>
+        <div className={style.ForgotButton}>
+        <Link to="/registration" className={style.ForgotButton1} >New Registration</Link>
+        <Link to="/forgotpassword" className={style.ForgotButton1}>Forgot Password</Link>
+        </div>
         <button type="submit">Login</button>
       </form>
       {message && <p style={{ color: 'green' }}>{message}</p>}
