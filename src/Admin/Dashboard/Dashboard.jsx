@@ -4,6 +4,9 @@ import style from '../Dashboard/Dashboard.module.css';
 import axios from 'axios';
 import {Hostlink} from '../../Component/Hostlink/Hostlink.jsx'
 const Dashboard = () => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const currentUserId = user ? user._id : null;
+
     const [stats, setStats] = useState({
         totalAssigned: 0,
         totalUserTasks: 0,
@@ -17,8 +20,8 @@ const Dashboard = () => {
             try {
                 const response = await axios.get(`${Hostlink}/user/task/`);
                 const AllData = response.data.result;
-
-                const assignedTasks = AllData.filter(task => task.Assign_To).length;
+                const userAssignedTasks = currentUserId ? AllData.filter(task => task.userId === currentUserId): [];
+                const assignedTasks = userAssignedTasks.length;
                 const userTasks = AllData.length;
                 const inProgressTasks = AllData.filter(task => task.status === 'In Progress').length;
                 const completedTasks = AllData.filter(task => task.status === 'Completed').length;
