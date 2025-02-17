@@ -96,6 +96,7 @@ button:hover {
   .container {
     padding: 40px;
     width: 100vw;
+    height: 117vh;
   }
   .mainCard {
     padding: 20px;
@@ -105,3 +106,29 @@ button:hover {
     padding: 8px;
   }
 }
+@media (max-width: 250px) {
+  .container {
+    padding: 40px;
+    width: 100vw;
+    height: 150vh;
+  }
+  .ForgotButton{
+    display: flex;
+    flex-direction: column;
+  }
+  .ForgotButton1{
+    margin: 2px;
+  }
+}
+@media (max-width: 175px) {
+  .container {
+    padding: 40px;
+    width: 100vw;
+    height: 180vh;
+  }}
+@media (max-width: 86px) {
+  .container {
+    padding: 40px;
+    width: 100vw;
+    height: 245vh;
+  }}

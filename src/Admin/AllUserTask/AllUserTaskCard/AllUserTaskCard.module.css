@@ -28,6 +28,7 @@
   }
   .CardIteam::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
   }
 
   .CardIteam::-webkit-scrollbar-thumb {
@@ -38,6 +39,7 @@
   .CardIteam::-webkit-scrollbar-track {
       background: #1e1e1e;
   }
+  
 
   .mainContainer {
     background-color: #1e1e1e; 

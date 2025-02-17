@@ -40,8 +40,15 @@
     .mainContainer {
       flex-direction: column;
       align-items: center;
-      width: 124vh;
-
+      width: 122vh;
+    }
+  }
+  @media (max-width: 204px) {
+    .mainContainer {
+      flex-direction: column;
+      align-items: center;
+      width: 122vh;
+      height: 400vh;
     }
   }
  

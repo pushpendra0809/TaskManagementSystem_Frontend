@@ -28,6 +28,7 @@
   }
   .CardIteam::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
   }
 
   .CardIteam::-webkit-scrollbar-thumb {

@@ -14,7 +14,7 @@ min-height: 100vh;
 margin-left: 25px;
 }
 .adminContainer {
-  margin-left:var(--sidebar-width);
+margin-left:var(--sidebar-width);
 }
 
 .mainheading {
@@ -126,30 +126,74 @@ text-align: center;
    margin-left: 0;
 }
 .adminContainer{
-  width: 97.5%;
+  width: 97.4%;
 }
 .Containerresposiv{
-  width: 95%;
+  width: 94.7%;
 }
 .container{
   margin-left: 0;
 }
 }
 
+@media (max-width: 734px) {
+.adminContainer{
+  width: 97.2%;
+}
+.Containerresposiv{
+  width: 94.4%;
+}
+}
 @media (max-width: 680px) {
 .Containerresposiv{
   width: 94%;
 }
 .adminContainer{
-  width: 96.5%;
+  width: 97%;
+}
+}
+@media (max-width: 634px) {
+
+.Containerresposiv {
+  width: 93.5%;
+}
+.adminContainer{
+  width: 96.8%;
 }
 }
 @media (max-width: 600px) {
 .Containerresposiv{
-  width: 93%;
+  width: 93.2%;
 }
 .adminContainer{
   width: 96.5%;
+}
+}
+@media (max-width: 560px) {
+
+.Containerresposiv {
+  width: 92.8%;
+}  
+.adminContainer{
+  width: 96.4%;
+}
+}
+@media (max-width: 540px) {
+
+.Containerresposiv {
+  width: 92.5%;
+}  
+.adminContainer{
+  width: 96.3%;
+}
+}
+@media (max-width: 520px) {
+
+.Containerresposiv {
+  width: 92.2%;
+}  
+.adminContainer{
+  width: 96.1%;
 }
 }
 @media (max-width: 480px) {
@@ -177,28 +221,105 @@ margin:  0 10% ;
   font-size: 0.8rem;
 }
 .adminContainer{
+  width: 95.9%;
+}
+}
+
+@media (max-width: 461px) {
+
+.Containerresposiv {
+  width: 91%;
+}
+.adminContainer{
   width: 95.5%;
 }
+
 }
 
 @media (max-width: 430px) {
 
 .Containerresposiv {
-  width: 117vh;
+  width: 118.5vh;
+}
+.adminContainer{
+  width: 95.2%;
 }
 
 }
 @media (max-width: 405px) {
 
 .adminContainer{
-  width: 94.5%;
+  width: 94.8%;
+}
+.Containerresposiv{
+  width: 118.5vh;
+  height: 223vh;
+}
+
+}
+@media (max-width: 360px) {
+
+.adminContainer{
+  width: 94.1%;
+}
+
+}
+@media (max-width: 340px) {
+
+.adminContainer{
+  width: 94%;
+}
+
+}
+@media (max-width: 315px) {
+
+.adminContainer{
+  width: 93.5%;
 }
 
 }
 @media (max-width: 304px) {
 
 .adminContainer{
-  width: 107vh;
+  width: 109vh;
+  height: 223vh;
+}
+.Containerresposiv{
+  width: 118.5vh;
+  height: 253vh;
 }
 
+}
+@media (max-width: 250px) {
+.Containerresposiv{
+  width: 118.5vh;
+  height: 320vh;
+}
+.adminContainer{
+  width: 109vh;
+  height: 285vh;
+}
+}
+@media (max-width: 200px) {
+.Containerresposiv{
+  width: 118.5vh;
+  height: 370vh;
+}
+.adminContainer{
+  width: 109vh;
+  height: 333vh;
+}
+}
+@media (max-width: 175px) {
+.Containerresposiv{
+  width: 118.5vh;
+  height: 390vh;
+}
+.adminContainer{
+  width: 109vh;
+  height: 375vh;
+}
+.mainheading{
+  margin-top: -50%;
+}
 }

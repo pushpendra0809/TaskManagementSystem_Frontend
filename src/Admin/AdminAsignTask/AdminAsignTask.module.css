@@ -152,10 +152,45 @@ h1 {
 .fullContainer{
   background-color: #121212; 
     margin-left: 0;
-    width: 103vw;
+    width: 102.8vw;
 }
 .withNavbar{
   background-color: transparent; 
+}
+}
+@media (max-width: 655px) {
+  .fullContainer{
+    width: 103.2vw;
+}
+}
+@media (max-width: 615px) {
+  .fullContainer{
+    width: 103.4vw;
+}
+}
+@media (max-width: 575px) {
+  .fullContainer{
+    width: 103.6vw;
+}
+}
+@media (max-width: 530px) {
+  .fullContainer{
+    width: 103.8vw;
+}
+}
+@media (max-width: 500px) {
+  .fullContainer{
+    width: 104vw;
+}
+}
+@media (max-width: 470px) {
+  .fullContainer{
+    width: 104.2vw;
+}
+}
+@media (max-width: 440px) {
+  .fullContainer{
+    width: 104.5vw;
 }
 }
 @media (max-width: 418px) {
@@ -169,13 +204,38 @@ h1 {
   align-items: center;
 }
 .fullContainer{
-  width: 105%;
+  width: 104.9%;
 }
 .withNavbar{
   background-color: transparent; 
 }
 .card .mainHeading{
   font-size: 1.5rem;
+}
+}
+@media (max-width: 400px) {
+  .fullContainer{
+    width: 105%;
+}
+}
+@media (max-width: 380px) {
+  .fullContainer{
+    width: 105.2%;
+}
+}
+@media (max-width: 360px) {
+  .fullContainer{
+    width: 105.6%;
+}
+}
+@media (max-width: 340px) {
+  .fullContainer{
+    width: 105.9%;
+}
+}
+@media (max-width: 340px) {
+  .fullContainer{
+    width: 106.3%;
 }
 }
 @media (max-width: 304px) {
@@ -188,13 +248,14 @@ h1 {
     flex-direction: column;
     align-items: center;
   }
-  .withNavbar {
-    width: 103vh;
-    height: auto;
- 
-  }
   .fullContainer{
-    width: 118vh;
+    width: 116.1vh;
 
+}
+}
+@media (max-width: 304px) {
+  .fullContainer{
+    width: 116.1vh;
+    height: 375vh;
 }
 }

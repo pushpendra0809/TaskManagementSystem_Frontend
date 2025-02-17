@@ -118,6 +118,7 @@
       .AllContent{
         margin-left: 0;
         width: 103%;
+        padding-bottom: 20px;
         
       }
       .mainContainer12 {
@@ -129,6 +130,34 @@
         justify-content: end;
         margin-right: 18px;
         margin-left: 0;
+      }
+     
+    }
+    @media (max-width: 640px) {
+      .AllContent{
+        margin-left: 0;
+        width: 103.1%;
+      }
+     
+    }
+    @media (max-width: 620px) {
+      .AllContent{
+        margin-left: 0;
+        width: 103.2%;
+      }
+     
+    }
+    @media (max-width:590px) {
+      .AllContent{
+        margin-left: 0;
+        width: 103.4%;
+      }
+     
+    }
+    @media (max-width:550px) {
+      .AllContent{
+        margin-left: 0;
+        width: 103.6%;
       }
      
     }
@@ -146,10 +175,33 @@
       }
      
     }
+    @media (max-width: 355px) {
+      .AllContent{
+        margin-left: 0;
+        width: 105.7%;
+      }
+     
+    }
+    @media (max-width: 320px) {
+      .AllContent{
+        margin-left: 0;
+        width: 106.5%;
+      }
+     
+    }
     @media (max-width: 304px) {
       .AllContent{
         margin-left: 0;
-        width: 118vh;
+        width: 116vh;
+        height: 400%;
+      }
+     
+    }
+    @media (max-width: 204px) {
+      .AllContent{
+        margin-left: 0;
+        width: 116vh;
+        height: 400vh;
       }
      
     }
